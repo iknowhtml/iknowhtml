@@ -1,0 +1,31 @@
+body{
+	background-image: url('https://static3.onlinechesslessons.net/wp-content/uploads/2014/12/hedgehog2.jpg');
+}
+h1{
+	text-align: center;
+	color: white;
+}
+
+.img-container {
+  width: 100%;
+  height: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.img {
+	position: relative;
+ 	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	
+  	@include translateX(-50%);
+  	max-height: 100%;
+
+   @media (min-width: 800px) {
+    left: 0; // set the left back to 0
+    max-height: none; // remove the max-height
+    max-width: 100%;
+    
+    @include translateY(-50%);
+}
