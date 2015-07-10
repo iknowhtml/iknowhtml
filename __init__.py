@@ -9,7 +9,7 @@ from flask import render_template
 @app.route("/")
 @app.route("/index")
 def index():
-    return render_template('what_the.html')
+    return render_template('index.html')
 
 if __name__ == "__main__":
     app.run()
