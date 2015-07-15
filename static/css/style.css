@@ -1,100 +1,97 @@
-
-@font-face{
-	font-family: 'font';
-	src: url('../fonts/Raleway/Raleway-Regular.ttf');
-  /*src: url('../fonts/Lato/Lato-Regular.ttf');*/
-}
-
-@font-face{
-  font-family: 'font-light';
-  src: url('../fonts/Raleway/Raleway-ExtraLight.ttf');
-   /*src: url('../fonts/Lato/Lato-Light.ttf');*/
-}
- 
- @font-face{
-  font-family: 'font-bold';
-  src: url('../fonts/Raleway/Raleway-SemiBold.ttf');
-  /*src: url('../fonts/Lato/Lato-Bold.ttf');*/
-;
-
-}   
-
+/* STYLESHEET FOR IKNOWHT.ML*/
+/*Variable Configurations*/
+@font-face {
+  font-family: "Font-Regular";
+  src: url("../fonts/Raleway/Raleway-Regular.ttf"); }
+@font-face {
+  font-family: "Font-Thin";
+  src: url("../fonts/Raleway/Raleway-Thin.ttf"); }
+@font-face {
+  font-family: "Font-Bold";
+  src: url("../fonts/Raleway/Raleway-Bold.ttf"); }
 body {
-  margin: 0;
-}
+  margin: 0; }
 
-.intro-container {
-  overflow: auto;
-  text-align: center;
-}
-
-.intro-background {
-  height: 600px;
-  background: url('/static/img/background.jpg') no-repeat center center;
-  background-position-y: 40%;
-  color: #fff;
-  -webkit-filter: grayscale(100%);
-}
-
-.overlay{
-  height:100%;
-  background: rgba(0,0,0,0.65);
-}
-
-.main-navigation-container{
-  padding: 20px 20px;
+.site-wrapper {
   width: 100%;
-}
+  height: 100%;
+  position: fixed; }
 
-.main-navigation{
-  padding: 30px 30px;
-  font-family: 'font-light';
-  text-align: right;
-  font-size: 15px;
-  letter-spacing: 3px;
- 
-}
+/*styling for introduction container and background image/overlay */
+.intro-container {
+  font-family: "Font-Thin";
+  text-align: center;
+  color: #fff; }
+  .intro-container .intro-background {
+    height: 725px;
+    background: url("/static/img/background.jpg") no-repeat center center;
+    background-position-y: 40%;
+    background-position-x: 49.25%;
+    -webkit-filter: grayscale(100%); }
+  .intro-container .overlay {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65); }
 
-.navigation-option{
-  padding: 0px 10px;
-  display: inline;
-}
+/*styling for navigation bar in introduction*/
+.main-navigation-container {
+  padding: 20px 20px;
+  width: 100%; }
+  .main-navigation-container .navigation {
+    padding: 35px 30px;
+    text-align: right;
+    font-size: 15px;
+    letter-spacing: 3px; }
+    @media only screen and (max-width: 641px) and (min-width: 0px) {
+      .main-navigation-container .navigation .main-navigation {
+        display: none; } }
+    .main-navigation-container .navigation .main-navigation .navigation-option {
+      padding: 0px 10px;
+      display: inline; }
+      .main-navigation-container .navigation .main-navigation .navigation-option a {
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.75); }
+        .main-navigation-container .navigation .main-navigation .navigation-option a:hover {
+          text-decoration: none;
+          color: rgba(255, 255, 255, 0.85); }
+  .main-navigation-container .mobile-navigation {
+    display: none;
+    padding: 10px 10px; }
+    @media only screen and (max-width: 641px) and (min-width: 0px) {
+      .main-navigation-container .mobile-navigation {
+        display: inline; } }
+    .main-navigation-container .mobile-navigation .mobile-navigation-btn {
+      padding: 0px 0px;
+      float: right; }
+      .main-navigation-container .mobile-navigation .mobile-navigation-btn .bar {
+        width: 22px;
+        height: 2px;
+        background-color: #fff;
+        margin: 6px 0px; }
 
-.navigation-option a{
-  text-decoration: none;
-  color:rgba(255, 255, 255, 0.75);
+.mobile-navigation-menu {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.99); }
 
-}
+/*styling for header content in introduction */
+.introduction-header-container {
+  padding: 165px 0px;
+  width: 100%; }
+  @media only screen and (max-width: 526px) and (min-width: 0px) {
+    .introduction-header-container {
+      padding: 100px 0px;
+      width: 100%; } }
+  .introduction-header-container .introduction-header {
+    padding: 0px 0px;
+    margin: 0px; }
+    .introduction-header-container .introduction-header .introduction-header-main {
+      text-align: center;
+      font-size: 100px;
+      letter-spacing: 15px; }
+    .introduction-header-container .introduction-header .introduction-header-sub {
+      margin: 10px 0px;
+      text-align: center;
+      font-size: 22.5px;
+      letter-spacing: 4.5px; }
 
-.navigation-option a:hover{
-  text-decoration: none;
-  color:rgba(255, 255, 255, 1);
-
-}
-
-.introduction-header-container{
-  margin: 0px 0px;
-  padding: 140px 200px;
-  width:100%;
-
-}
-
-.introduction-header{
-  padding: 5px 0px;
-}
-
-.introduction-header-main{
-    font-family: 'font-bold';
-    text-align:center;
-    font-size: 75px;
-    letter-spacing: 5px;
-}
-.introduction-header-sub{
-    margin:10px 10px;
-    font-family: 'font';
-    text-align:center;
-    font-size: 20px;
-    letter-spacing: 2.5px;
-}
-
-}
+/*# sourceMappingURL=style.css.map */

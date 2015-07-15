@@ -1,0 +1,150 @@
+/* STYLESHEET FOR IKNOWHT.ML*/
+
+/*Variable Configurations*/
+$font-name: 'Raleway';
+$font-base-path: '../fonts/';
+
+@function fontPath($style){
+  @return $font-base-path + $font-name + '/' + $font-name + '-'+ $style + '.ttf';
+}
+
+@mixin addFont($style){
+  @font-face{
+	 font-family: 'Font-' + $style;
+	 src: url(fontPath($style));
+  }
+}
+
+@include addFont('Regular');
+@include addFont('Thin');
+@include addFont('Bold');
+
+@mixin setFont($style){
+  font-family: 'Font-' + $style;
+}
+
+@mixin media-query($max_size, $min_size){
+  @media only screen and (max-width:#{$max_size}) and (min-width:#{$min_size}){
+    @content
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.site-wrapper{
+  width:100%;
+  height:100%;
+  position: fixed;
+}
+
+/*styling for introduction container and background image/overlay */
+.intro-container {
+  @include setFont("Thin");
+  text-align: center;
+  color:#fff;
+
+  .intro-background {
+    height: 725px;
+    background: url('/static/img/background.jpg') no-repeat center center;
+    background-position-y: 40%;
+    background-position-x: 49.25%;
+    -webkit-filter: grayscale(100%);
+  }
+
+  .overlay{
+    height:100%;
+    background: rgba(0,0,0,0.65);
+  }
+}
+
+/*styling for navigation bar in introduction*/
+.main-navigation-container{
+  padding: 20px 20px;
+  width: 100%;
+
+  .navigation{
+    padding: 35px 30px;
+    text-align: right;
+    font-size: 15px;
+    letter-spacing: 3px;
+
+    .main-navigation{
+      @include media-query(641px, 0px){
+        display: none;
+      }
+
+      .navigation-option{
+        padding: 0px 10px;
+        display: inline;
+
+        a{
+          text-decoration: none;
+          color:rgba(255, 255, 255, 0.75);
+
+          &:hover{
+            text-decoration: none;
+            color:rgba(255, 255, 255, 0.85);
+          }
+        }
+      }
+    }
+  }
+  
+  .mobile-navigation{
+    display: none;
+    padding: 10px 10px;
+
+    @include media-query(641px, 0px){
+      display: inline;
+    }
+
+    .mobile-navigation-btn{
+      padding:0px 0px;
+      float:right;
+      
+      .bar{
+        width: 22px;
+        height: 2px;
+        background-color: #fff;
+        margin: 6px 0px;
+      }
+    }
+  }
+}
+
+.mobile-navigation-menu{
+  height: 100%;
+  width:100%;
+  background: rgba(0,0,0,0.99);
+}
+
+/*styling for header content in introduction */
+.introduction-header-container{
+  padding: 165px 0px;
+  width:100%;
+
+  @include media-query(526px, 0px){
+    padding: 100px 0px;
+    width: 100%;
+  }
+
+  .introduction-header{
+    padding: 0px 0px;
+    margin: 0px;
+
+    .introduction-header-main{
+      text-align:center;
+      font-size: 100px;
+      letter-spacing: 15px;
+    }
+  
+    .introduction-header-sub{
+      margin: 10px 0px;
+      text-align:center;
+      font-size: 22.5px;
+      letter-spacing: 4.5px;
+    }
+  }
+}
