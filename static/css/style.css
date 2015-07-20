@@ -33,6 +33,10 @@ body {
     background-position-y: 40%;
     background-position-x: 49.25%;
     -webkit-filter: grayscale(100%); }
+    @media only screen and (max-width: 736px) and (min-width: 0px) {
+      .intro-container .intro-background {
+        height: 500px;
+        width: auto; } }
   .intro-container .overlay {
     height: 100%;
     background: rgba(0, 0, 0, 0.65); }
@@ -67,10 +71,8 @@ body {
       .main-navigation-container .mobile-navigation {
         display: inline; }
         .main-navigation-container .mobile-navigation .mobile-navigation-btn-container {
-          height: 40px;
-          margin-right: 10px;
-          margin-top: 30px;
-          margin-bottom: 20px; }
+          height: 30px;
+          margin-right: 5px; }
           .main-navigation-container .mobile-navigation .mobile-navigation-btn-container .mobile-navigation-btn {
             float: right; }
             .main-navigation-container .mobile-navigation .mobile-navigation-btn-container .mobile-navigation-btn .bar {
@@ -96,8 +98,8 @@ body {
     letter-spacing: 3px; }
     .mobile-navigation-container .navigation .mobile-navigation-menu .mobile-navigation-btn-container {
       height: 30px;
-      margin-right: 60px;
-      margin-top: 50px; }
+      margin-right: 55px;
+      margin-top: 20px; }
       .mobile-navigation-container .navigation .mobile-navigation-menu .mobile-navigation-btn-container .mobile-navigation-btn {
         float: right; }
         .mobile-navigation-container .navigation .mobile-navigation-menu .mobile-navigation-btn-container .mobile-navigation-btn .bar {
@@ -127,10 +129,12 @@ body {
   padding: 160px 0px;
   width: 100%;
   z-index: -10000; }
+  @media only screen and (max-width: 736px) and (min-width: 527px) {
+    .introduction-header-container {
+      padding: 100px 0px; } }
   @media only screen and (max-width: 526px) and (min-width: 0px) {
     .introduction-header-container {
-      padding: 100px 0px;
-      width: 100%; } }
+      padding: 50px 0px; } }
   .introduction-header-container .introduction-header {
     padding: 0px 0px;
     margin: 0px; }
