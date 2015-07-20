@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<header>
+<head>
   <!-- meta tags -->
   <meta name="author" content="Xiaoyu A. Gao">
   <meta name="description" content="Personal Portfolio Site For Aki Gao">
@@ -15,14 +15,41 @@
   <script src="/static/js/angular.js" type="text/javascript"></script>
   <script src="/static/js/site.js" type="text/javascript"></script>
   <script src="/static/js/scripts.js" type="text/javascript"></script>
-
-
   <title>Aki Gao | Full Stack Developer</title>
-</header>
+</head>
 
-</body ng-app="siteApp">
+<body ng-app="siteApp" ng-controller="navCtrl">
+   <!-- mobile navigation container begins -->
+  <div class = "mobile-navigation-container" ng-show="showMobileMenu">
+    <div class="navigation">
+    <!-- mobile navigation starts -->
+      <div class="mobile-navigation-menu" ng-click="toggleMobileMenu()">
+        <div class="mobile-navigation-btn-container">
+          <div class="mobile-navigation-btn">
+            <div class="bar" id="top_bar"></div>
+            <div class="bar" id="middle_bar"></div>
+            <div class="bar" id="bottom_bar"></div>
+          </div>
+        </div>
+        <div class="navigation-menu-options">
+            <div class="menu-option">
+              <a href="#profile">Profile</a>
+            </div>
+            <div class="menu-option">
+              <a href="#projects">Projects</a>
+            </div>
+            <div class="menu-option">
+              <a href="#contact">Contact</a>
+            </div>
+        </div>
+      </div>
+    </div>
+    <!-- mobile navigation ends -->
+  </div>
+  <!-- mobile navigation container ends -->
+  
   <!--site wrapper begins -->
-  <div class="site-wrapper">
+  <div class="site-wrapper" ng-class="{fixed:showMobileMenu}">
     <!-- introduction container begins-->
     <div class="intro-container">
     <!-- background image  for container begins -->
@@ -36,26 +63,25 @@
               <!-- main navigation bar begins -->
               <div class="main-navigation">
                 <div class="navigation-option">
-                  <a href="#">Profile</a>
+                  <a href="#profile">Profile</a>
                 </div>
                 <div class="navigation-option">
-                  <a href="#">Work</a>
+                  <a href="#projects">Projects</a>
                 </div>
                 <div class="navigation-option">
-                  <a href="#">Resume</a>
-                </div>
-                <div class="navigation-option">
-                  <a href="#">Contact</a>
+                  <a href="#contact">Contact</a>
                 </div>
               </div>
               <!-- main navigation bar ends -->
             
               <!-- mobile navigation starts -->
               <div class="mobile-navigation">
-                <div class="mobile-navigation-btn">
-                  <div class="bar" id="top_bar"></div>
-                  <div class="bar" id="middle_bar"></div>
-                  <div class="bar" id="bottom_bar"></div>
+                <div class="mobile-navigation-btn-container">
+                  <div class="mobile-navigation-btn" ng-click="toggleMobileMenu()">
+                    <div class="bar" id="top_bar"></div>
+                    <div class="bar" id="middle_bar"></div>
+                    <div class="bar" id="bottom_bar"></div>
+                  </div>
                 </div>
               </div>
             <!-- mobile navigation ends -->
@@ -85,10 +111,54 @@
     </div>
     <!-- introduction container ends -->
 
+    <!-- body container starts -->
+    <div class="body-container ">
     <!-- profile container begins -->
-    <section id="profile" class="section-container">
-    </section>
+      <section id="profile" class="section-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="section-title">Profile</div>
+          <div class="section-body
+          col-lg-6 col-lg-offset-3
+          col-md-6 col-md-offset-3 
+          col-sm-8 col-sm-offset-2
+          col-xs-12">
+            <strong>Hey there, I'm Aki.</strong> I'm an undergraduate student at the University of Virginia persuing a Computer Engineering and Electrical Engineering double major. I'm a full stack and freelance web developer focused on leveraging modern web technologies to create innovative and elegantly designed web applications and websites. Check out some of my projects below!  
+        </div>
+      </section>
     <!-- profile container ends -->
+      <hr class="section-break
+      col-lg-8 col-lg-offset-2">
+      
+      <!-- projects container starts --> 
+      <section id="projects" class="section-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="section-title">Projects</div>
+        <div class="section-body
+          col-lg-6 col-lg-offset-3
+          col-md-6 col-md-offset-3 
+          col-sm-8 col-sm-offset-2
+          col-xs-12">
+              <strong>This section is currently under construction. In the meantime, heres one of my favorite xkcd comics!</strong>
+              <img class="placeholder-img" src="../static/img/computer_problems_xkcd_comic.png">
+          </div>
+      </section>
+      <!-- projects container ends -->
+      <hr class="section-break
+      col-lg-8 col-lg-offset-2">
+
+      <!-- contact container begins -->
+      <section id="contact" class="section-container col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="section-body
+          col-lg-6 col-lg-offset-3
+          col-md-6 col-md-offset-3 
+          col-sm-8 col-sm-offset-2
+          col-xs-12">
+          Interested in contacting or hiring me for freelance?<br/>
+          Contact me at <a href="mailto:xag9bb@virginia.edu">xag9bb@virginia.edu</a> so we can link up!
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- body container ends -->
   </div>
   <!-- site wrapper ends -->
 </body>
