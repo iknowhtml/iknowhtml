@@ -3,6 +3,7 @@
 /*Variable Configurations*/
 $font-name: 'Raleway';
 $font-base-path: '../fonts/';
+$intro-height: 725px;
 
 @function fontPath($style){
   @return $font-base-path + $font-name + '/' + $font-name + '-'+ $style + '.ttf';
@@ -53,28 +54,29 @@ body {
 }
 
 /*styling for introduction container and background image/overlay */
+
+.intro-background {
+  height: $intro-height;
+  background: url('/static/img/background.jpg') no-repeat center center;
+  background-position-x: 49%;
+  -webkit-filter: grayscale(100%) brightness(25%); 
+  position: relative;
+
+  @include media-query-horizontal(736px, 0px){
+    height: 500px;
+    width: auto;
+  }
+}
+
 .intro-container {
   @include setFont("Thin");
   text-align: center;
   color:#fff;
+  position:absolute;
+  top:0;
+  height: $intro-height;
+  width:100%;
 
-  .intro-background {
-    height: 725px;
-    background: url('/static/img/background.jpg') no-repeat center center;
-    background-position-y: 40%;
-    background-position-x: 49.25%;
-    -webkit-filter: grayscale(100%);
-
-    @include media-query-horizontal(736px, 0px){
-      height: 500px;
-      width: auto;
-    }
-  }
-
-  .overlay{
-    height:100%;
-    background: rgba(0,0,0,0.65);
-  }
 }
 
 @mixin navigation{
@@ -93,7 +95,7 @@ body {
 
     &:hover{
       text-decoration: none;
-      color:rgba(255, 255, 255, 0.85);
+      color:rgba(255, 255, 255, 0.9);
     }
   }
 }

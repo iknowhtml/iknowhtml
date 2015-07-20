@@ -13,6 +13,7 @@
 
   <!-- javascript imports -->
   <script src="/static/js/angular.js" type="text/javascript"></script>
+  <script src="/static/js/parallax.js" type="text/javascript"></script>
   <script src="/static/js/site.js" type="text/javascript"></script>
   <script src="/static/js/scripts.js" type="text/javascript"></script>
   <title>Aki Gao | Full Stack Developer</title>
@@ -21,8 +22,9 @@
 <body ng-app="siteApp" ng-controller="navCtrl">
    <!-- mobile navigation container begins -->
   <div class = "mobile-navigation-container" ng-show="showMobileMenu">
+    <!--navigation begins -->
     <div class="navigation">
-    <!-- mobile navigation starts -->
+      <!-- mobile navigation begins -->
       <div class="mobile-navigation-menu" ng-click="toggleMobileMenu()">
         <div class="mobile-navigation-btn-container">
           <div class="mobile-navigation-btn">
@@ -43,71 +45,68 @@
             </div>
         </div>
       </div>
+      <!-- mobile navigation ends -->
     </div>
-    <!-- mobile navigation ends -->
+    <!-- navigation ends -->
   </div>
   <!-- mobile navigation container ends -->
   
   <!--site wrapper begins -->
   <div class="site-wrapper" ng-class="{fixed:showMobileMenu}">
+    <!-- background image for introduction begins -->
+    <div class="intro-background" parallax-background parallax-ratio="0.8"></div>
+    <!-- background image for introduction ends -->  
+    
     <!-- introduction container begins-->
     <div class="intro-container">
-    <!-- background image  for container begins -->
-      <div class="intro-background">
-        <!-- overlay and grayscale filter for background image begins -->
-        <div class="overlay">
-          <!-- main navigation container begins-->
-          <div class="main-navigation-container">
-            <!-- navigation begins -->
-            <div class="navigation">
-              <!-- main navigation bar begins -->
-              <div class="main-navigation">
-                <div class="navigation-option">
-                  <a href="#profile">Profile</a>
-                </div>
-                <div class="navigation-option">
-                  <a href="#projects">Projects</a>
-                </div>
-                <div class="navigation-option">
-                  <a href="#contact">Contact</a>
-                </div>
+      <!--navigation container begins -->
+        <div class="main-navigation-container">
+          <!-- navigation begins -->
+          <div class="navigation">
+            <!-- main navigation bar begins -->
+            <div class="main-navigation">
+              <div class="navigation-option">
+                <a href="#profile">Profile</a>
               </div>
-              <!-- main navigation bar ends -->
+              <div class="navigation-option">
+                <a href="#projects">Projects</a>
+              </div>
+              <div class="navigation-option">
+                <a href="#contact">Contact</a>
+              </div>
+            </div>
+            <!-- main navigation bar ends -->
             
-              <!-- mobile navigation starts -->
-              <div class="mobile-navigation">
-                <div class="mobile-navigation-btn-container">
-                  <div class="mobile-navigation-btn" ng-click="toggleMobileMenu()">
-                    <div class="bar" id="top_bar"></div>
-                    <div class="bar" id="middle_bar"></div>
-                    <div class="bar" id="bottom_bar"></div>
-                  </div>
+            <!-- mobile navigation starts -->
+            <div class="mobile-navigation">
+              <div class="mobile-navigation-btn-container">
+                <div class="mobile-navigation-btn" ng-click="toggleMobileMenu()">
+                  <div class="bar" id="top_bar"></div>
+                  <div class="bar" id="middle_bar"></div>
+                  <div class="bar" id="bottom_bar"></div>
                 </div>
               </div>
-            <!-- mobile navigation ends -->
             </div>
-            <!-- navigation ends -->
+          <!-- mobile navigation ends -->
           </div>
-          <!-- main navigation container ends -->
-
-          <!--responsive grid for header begins-->
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-            <!-- header container begins -->
-            <div class="introduction-header-container">
-              <!-- header begins -->
-              <div class="introduction-header">
-                <div class="introduction-header-main">AKI GAO</div>
-                <div class="introduction-header-sub">Engineer & Full Stack Developer</div>
-              </div>
-              <!-- header ends -->
-            </div>
-            <!-- header container ends -->  
-          </div>
-          <!-- responsive grid for header ends -->
+          <!-- navigation ends -->
         </div>
-          <!-- overlay and grayscale filter ends -->
-      </div>  
-        <!-- background image for container ends--> 
+        <!-- navigation container ends -->
+          
+        <!--responsive grid for header begins-->
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <!-- header container begins -->
+          <div class="introduction-header-container">
+            <!-- header begins -->
+            <div class="introduction-header">
+              <div class="introduction-header-main">AKI GAO</div>
+              <div class="introduction-header-sub">Engineer & Full Stack Developer</div>
+            </div>
+            <!-- header ends -->
+          </div>
+          <!-- header container ends -->  
+        </div>
+        <!-- responsive grid for header ends -->
     </div>
     <!-- introduction container ends -->
 
@@ -136,7 +135,7 @@
           col-md-6 col-md-offset-3 
           col-sm-8 col-sm-offset-2
           col-xs-12">
-              <strong>This section is currently under construction. In the meantime, heres one of my favorite xkcd comics!</strong>
+              <strong>This section is currently under construction. In the meantime, enjoy one of my favorite xkcd comics!</strong>
               <img class="placeholder-img" src="../static/img/computer_problems_xkcd_comic.png">
           </div>
       </section>
