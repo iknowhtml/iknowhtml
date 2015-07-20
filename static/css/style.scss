@@ -111,6 +111,10 @@ body {
 
   @include navigation{
     padding: 0px 30px;
+
+    @include media-query(736px, 0px){
+      padding: 0px 10px;
+    }
     
     .main-navigation{
       margin: 35px 0px;
