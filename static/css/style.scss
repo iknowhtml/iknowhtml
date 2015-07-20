@@ -169,7 +169,7 @@ body {
       
       .mobile-navigation-btn-container{
         height: 30px;
-        margin-right: 55px;
+        margin-right: 35px;
         margin-top: 20px;
               
         @include mobile-navigation-btn;
@@ -180,7 +180,7 @@ body {
         position: absolute;
         height:80%;
         width:100%;
-        padding: 130px 0px;
+        padding: 25% 0px;
         @include setFont('Regular');
         font-size:30px;
 

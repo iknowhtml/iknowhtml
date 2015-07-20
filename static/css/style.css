@@ -101,7 +101,7 @@ body {
     letter-spacing: 3px; }
     .mobile-navigation-container .navigation .mobile-navigation-menu .mobile-navigation-btn-container {
       height: 30px;
-      margin-right: 55px;
+      margin-right: 35px;
       margin-top: 20px; }
       .mobile-navigation-container .navigation .mobile-navigation-menu .mobile-navigation-btn-container .mobile-navigation-btn {
         float: right; }
@@ -115,7 +115,7 @@ body {
       position: absolute;
       height: 80%;
       width: 100%;
-      padding: 130px 0px;
+      padding: 25% 0px;
       font-family: "Font-Regular";
       font-size: 30px; }
       .mobile-navigation-container .navigation .mobile-navigation-menu .navigation-menu-options .menu-option {
