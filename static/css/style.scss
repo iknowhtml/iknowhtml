@@ -290,7 +290,7 @@ body {
 
   .section-container{
     text-align: center;
-    color: #222222;
+    color: #000000;
     @include ease-transition;
     
     .section-title{
@@ -306,10 +306,6 @@ body {
       font-size: 20px;
       line-height: 150%;
       margin-bottom:40px;
-
-      @include media-query-horizontal(736px, 0px){
-        @include setFont('Regular');
-      }
     }
 
     a{
@@ -336,10 +332,6 @@ body {
 
 .contact-container{
 }
-
-.footer{
- 
-  .copyright{
-    font-size:15px;
-  }
+.copyright{
+  font-size:15px;
 }
