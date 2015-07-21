@@ -41,8 +41,8 @@ $intro-height: 725px;
 
 @mixin addFont($style){
   @font-face{
-	 font-family: 'Font-' + $style;
-	 src: url(fontPath($style));
+   font-family: 'Font-' + $style;
+   src: url(fontPath($style));
   }
 }
 
@@ -290,7 +290,7 @@ body {
 
   .section-container{
     text-align: center;
-    color: #000000;
+    color: #222222;
     @include ease-transition;
     
     .section-title{
@@ -306,6 +306,10 @@ body {
       font-size: 20px;
       line-height: 150%;
       margin-bottom:40px;
+
+      @include media-query-horizontal(736px, 0px){
+        @include setFont('Regular');
+      }
     }
 
     a{
@@ -332,6 +336,19 @@ body {
 
 .contact-container{
 }
-.copyright{
-  font-size:15px;
+
+.footer{
+  @include setFont('Thin');
+  text-align: center;
+  color: #FFFFFF;
+  background-color: black;
+  position:absolute;
+  height: 5%;
+  width: 100%;
+  padding:10px 0px;
+ 
+  .copyright{
+    font-size:15px;
+    margin: 5px 0px;
+  }
 }

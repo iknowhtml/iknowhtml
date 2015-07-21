@@ -187,7 +187,7 @@ body {
   margin: 0px 20px; }
   .body-container .section-container {
     text-align: center;
-    color: #000000;
+    color: #222222;
     -webkit-transition: width .2s ease;
     -moz-transition: width .2s ease;
     transition: width .2s ease; }
@@ -202,6 +202,9 @@ body {
       font-size: 20px;
       line-height: 150%;
       margin-bottom: 40px; }
+      @media only screen and (max-width: 736px) and (min-width: 0px) {
+        .body-container .section-container .section-body {
+          font-family: "Font-Regular"; } }
     .body-container .section-container a {
       color: #222222;
       font-weight: bold; }
@@ -219,7 +222,17 @@ body {
   margin-top: 10px;
   width: 100%; }
 
-.copyright {
-  font-size: 15px; }
+.footer {
+  font-family: "Font-Thin";
+  text-align: center;
+  color: #FFFFFF;
+  background-color: black;
+  position: absolute;
+  height: 5%;
+  width: 100%;
+  padding: 10px 0px; }
+  .footer .copyright {
+    font-size: 15px;
+    margin: 5px 0px; }
 
 /*# sourceMappingURL=style.css.map */
