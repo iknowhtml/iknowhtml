@@ -2,7 +2,7 @@
 //STYLESHEET FOR IKNOWHT.ML//
 /////////////////////////////
 
-//CSS Animations
+/////CSS Animations/////
 @-webkit-keyframes slideup {
   0%   { opacity: 0;
          -webkit-transform: translateY(30px);
@@ -29,12 +29,14 @@
          transform: translateY(0);
          }
 }
+////////////////////////
 
-//Variable Configurations
+/////font configurations/////
 $font-name: 'Raleway';
 $font-base-path: '../fonts/';
-$intro-height: 725px;
+////////////////////////////
 
+/////functions for managing fonts/////
 @function fontPath($style){
   @return $font-base-path + $font-name + '/' + $font-name + '-'+ $style + '.ttf';
 }
@@ -53,7 +55,9 @@ $intro-height: 725px;
 @mixin setFont($style){
   font-family: 'Font-' + $style;
 }
+////////////////////////////////////
 
+/////media query functions//////
 @mixin media-query-horizontal($max_size, $min_size){
   @media only screen and (max-width:#{$max_size}) and (min-width:#{$min_size}){
     @content
@@ -71,7 +75,9 @@ $intro-height: 725px;
   -moz-transition: width .2s ease;
   transition: width .2s ease;
 }
+//////////////////////////////
 
+/////site styling/////
 body {
   margin: 0;
 }
@@ -88,17 +94,20 @@ body {
   overflow-y: hidden;
 }
 
-//styling for introduction container and background image/overlay 
+//////styling for introduction container and background image/overlay///// 
+$intro-height: 725px;
+
 .intro-background {
   height: $intro-height;
   background: url('/static/img/background.jpg') no-repeat center center;
-  background-position-x: 49%;
+  background-position-x: 47%;
   -webkit-filter: grayscale(100%) brightness(25%); 
   position: relative;
 
   @include media-query-horizontal(736px, 0px){
     height: 500px;
     width: auto;
+    background-position-x: 49%;
   }
 }
 
@@ -112,7 +121,9 @@ body {
   width:100%;
 
 }
+//////////////////////////////////////////////////////////////////////////
 
+//////navigation menu mixins/////
 @mixin navigation{
   .navigation{
     text-align: right;
@@ -149,8 +160,9 @@ body {
     }
   }
 }
+/////////////////////////////////
 
-//styling for navigation bar in introduction
+///////styling for navigation bar in introduction/////
 .main-navigation-container{
   padding: 20px 20px;
   width: 100%;
@@ -194,7 +206,9 @@ body {
     }
   }
 }
+//////////////////////////////////////////////////////
 
+/////styling for navigation menu for mobile view//////
 .mobile-navigation-container{
   display:none;
   position:absolute;
@@ -249,8 +263,9 @@ body {
     }
   }
 }
+///////////////////////////////////////////////////
 
-//styling for header content in introduction
+/////styling for header content in introduction/////
 .introduction-header-container{
   padding: 160px 0px;
   width:100%;
@@ -267,13 +282,18 @@ body {
 
 
   .introduction-header{
-    padding: 0px 0px;
-    margin: 0px;
+    padding-left: 70px;
+
+    @include media-query-horizontal(736px, 0){
+      padding-left: 0px;
+    }
+
 
     .introduction-header-main{
       text-align:center;
       font-size: 100px;
       letter-spacing: 15px;
+
     }
   
     .introduction-header-sub{
@@ -284,9 +304,10 @@ body {
     }
   }
 }
+////////////////////////////////////////////////////
 
+/////styling for body content/////
 $font-color: #222222;
-
 .body-container{
   margin: 0px 20px;
 
@@ -338,7 +359,9 @@ $font-color: #222222;
 
 .contact-container{
 }
+//////////////////////////////////
 
+/////footer styling/////
 .footer{
   @include setFont('Thin');
   text-align: center;
@@ -351,3 +374,4 @@ $font-color: #222222;
     margin: 10px 0px;
   }
 }
+////////////////////////

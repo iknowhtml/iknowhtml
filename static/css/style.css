@@ -44,13 +44,14 @@ body {
 .intro-background {
   height: 725px;
   background: url("/static/img/background.jpg") no-repeat center center;
-  background-position-x: 49%;
+  background-position-x: 47%;
   -webkit-filter: grayscale(100%) brightness(25%);
   position: relative; }
   @media only screen and (max-width: 736px) and (min-width: 0px) {
     .intro-background {
       height: 500px;
-      width: auto; } }
+      width: auto;
+      background-position-x: 49%; } }
 
 .intro-container {
   font-family: "Font-Thin";
@@ -171,8 +172,10 @@ body {
     .introduction-header-container {
       padding: 50px 0px; } }
   .introduction-header-container .introduction-header {
-    padding: 0px 0px;
-    margin: 0px; }
+    padding-left: 70px; }
+    @media only screen and (max-width: 736px) and (min-width: 0) {
+      .introduction-header-container .introduction-header {
+        padding-left: 0px; } }
     .introduction-header-container .introduction-header .introduction-header-main {
       text-align: center;
       font-size: 100px;
