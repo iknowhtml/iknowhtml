@@ -1,6 +1,36 @@
-/* STYLESHEET FOR IKNOWHT.ML*/
+/////////////////////////////
+//STYLESHEET FOR IKNOWHT.ML//
+/////////////////////////////
 
-/*Variable Configurations*/
+//CSS Animations
+@-webkit-keyframes slideup {
+  0%   { opacity: 0;
+         -webkit-transform: translateY(30px);
+   }
+  100% { opacity: 1;
+         -webkit-transform: translateY(0);
+         }
+}
+
+@-moz-keyframes slideup {
+  0%  { opacity: 0;
+         -moz-transform: translateY(30px);
+   }
+  100% { opacity: 1;
+         -moz-transform: translateY(0);
+         }
+}
+
+@keyframes slideup {
+  0%   { opacity: 0;
+         transform: translateY(30px);
+   }
+  100% { opacity: 1;
+         transform: translateY(0);
+         }
+}
+
+//Variable Configurations
 $font-name: 'Raleway';
 $font-base-path: '../fonts/';
 $intro-height: 725px;
@@ -36,6 +66,11 @@ $intro-height: 725px;
   }
 }
 
+@mixin ease-transition{
+  -webkit-transition: width .2s ease;
+  -moz-transition: width .2s ease;
+  transition: width .2s ease;
+}
 
 body {
   margin: 0;
@@ -53,8 +88,7 @@ body {
   overflow-y: hidden;
 }
 
-/*styling for introduction container and background image/overlay */
-
+//styling for introduction container and background image/overlay 
 .intro-background {
   height: $intro-height;
   background: url('/static/img/background.jpg') no-repeat center center;
@@ -92,6 +126,9 @@ body {
   a{
     text-decoration: none;
     color:rgba(255, 255, 255, 0.75);
+    transition: margin 0.2s ease;
+    -webkit-transition: margin 0.2s ease;
+    -moz-transition: margin 0.2s ease;
 
     &:hover{
       text-decoration: none;
@@ -113,7 +150,7 @@ body {
   }
 }
 
-/*styling for navigation bar in introduction*/
+//styling for navigation bar in introduction
 .main-navigation-container{
   padding: 20px 20px;
   width: 100%;
@@ -213,7 +250,7 @@ body {
   }
 }
 
-/*styling for header content in introduction */
+//styling for header content in introduction
 .introduction-header-container{
   padding: 160px 0px;
   width:100%;
@@ -253,6 +290,8 @@ body {
 
   .section-container{
     text-align: center;
+    color: #000000;
+    @include ease-transition;
     
     .section-title{
       @include setFont('Regular');
@@ -266,12 +305,7 @@ body {
       @include setFont('Thin');
       font-size: 20px;
       line-height: 150%;
-      color: #222222;
       margin-bottom:40px;
-    }
-
-    .section-break{
-      color: rgba(26, 26, 26, 0.6);
     }
 
     a{
@@ -281,10 +315,23 @@ body {
   }
 }
 
+.section-break{
+  border: none;
+  height: 1px;
+  background-color: rgba(34, 34, 34, 0.3);
+  -webkit-margin-before: 0.5em;
+  -webkit-margin-after: 0.5em;
+  -webkit-margin-start: auto;
+  -webkit-margin-end: auto;
+}
+
 .placeholder-img{
   margin-top:10px;
   width:100%;
 }
 
 .contact-container{
+}
+.copyright{
+  font-size:15px;
 }
