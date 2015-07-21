@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="siteApp" ng-controller="navCtrl">
 <head>
   <!-- meta tags -->
   <meta name="google-site-verification" content="F_fHI8uQZyniSWXh4c7PjDTlCyT0Kv3Hhu07PBWn4qg" />
@@ -21,7 +21,7 @@
   <title>Aki Gao | Full Stack Developer | Freelance Developer</title>
 </head>
 
-<body ng-app="siteApp" ng-controller="navCtrl">
+<body>
    <!-- mobile navigation container begins -->
   <div class = "mobile-navigation-container" ng-show="showMobileMenu">
     <!--navigation begins -->
@@ -173,7 +173,7 @@
   </div>
   <!-- site wrapper ends -->
 </body>
-<footer class="footer">
+<footer class="footer" ng-hide="showMobileMenu">
   <div class="copyright">&copy 2015 Xiaoyu A. Gao. All Rights Reserved.</div>
 </footer>
 </html>

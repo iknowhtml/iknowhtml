@@ -227,12 +227,9 @@ body {
   text-align: center;
   color: #FFFFFF;
   background-color: black;
-  position: absolute;
-  height: 5%;
-  width: 100%;
   padding: 10px 0px; }
   .footer .copyright {
     font-size: 15px;
-    margin: 5px 0px; }
+    margin: 10px 0px; }
 
 /*# sourceMappingURL=style.css.map */
