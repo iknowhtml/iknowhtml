@@ -285,12 +285,14 @@ body {
   }
 }
 
+$font-color: #222222;
+
 .body-container{
   margin: 0px 20px;
 
   .section-container{
     text-align: center;
-    color: #222222;
+    color: $font-color;
     @include ease-transition;
     
     .section-title{
