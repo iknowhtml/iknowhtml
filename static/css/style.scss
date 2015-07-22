@@ -101,14 +101,13 @@ $intro-height-mobile: 500px;
 .intro-background {
   height: $intro-height;
   width: 100%;
-    background-color: black;
-  //background: url('/static/img/background.jpg') no-repeat center center;
-  //background-position-x: 47%;
+  background-color: black;
   -webkit-filter: grayscale(100%) brightness(50%); 
   position: relative;
   overflow: hidden;
 
   @include media-query-horizontal(736px, 0px){
+    background: url('/static/img/background.jpg') no-repeat center center;
     height: $intro-height-mobile;
 
   }

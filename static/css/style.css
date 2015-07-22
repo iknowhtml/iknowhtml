@@ -50,6 +50,7 @@ body {
   overflow: hidden; }
   @media only screen and (max-width: 736px) and (min-width: 0px) {
     .intro-background {
+      background: url("/static/img/background.jpg") no-repeat center center;
       height: 500px; } }
   .intro-background .background-video {
     position: absolute;
