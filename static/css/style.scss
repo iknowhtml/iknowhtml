@@ -100,6 +100,8 @@ $intro-height-mobile: 500px;
 
 .intro-background {
   height: $intro-height;
+  width: 100%;
+    background-color: black;
   //background: url('/static/img/background.jpg') no-repeat center center;
   //background-position-x: 47%;
   -webkit-filter: grayscale(100%) brightness(50%); 
@@ -113,14 +115,14 @@ $intro-height-mobile: 500px;
 
   .background-video{
     position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
+    //-webkit-transform: translate(-50%, -50%);
+    //-moz-transform: translate(-50%, -50%);
+    //-ms-transform: translate(-50%, -50%);
+    //-o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    min-width: 100%;
+    min-width: 25%;
     min-height: 100%;
     width: auto;
     height: auto;

@@ -43,6 +43,8 @@ body {
 
 .intro-background {
   height: 725px;
+  width: 100%;
+  background-color: black;
   -webkit-filter: grayscale(100%) brightness(50%);
   position: relative;
   overflow: hidden; }
@@ -51,14 +53,10 @@ body {
       height: 500px; } }
   .intro-background .background-video {
     position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
-    min-width: 100%;
+    min-width: 25%;
     min-height: 100%;
     width: auto;
     height: auto; }
