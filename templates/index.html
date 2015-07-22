@@ -56,7 +56,15 @@
   <!--site wrapper begins -->
   <div class="site-wrapper" ng-class="{fixed:showMobileMenu}">
     <!-- background image for introduction begins -->
-    <div class="intro-background" parallax-background parallax-ratio="0.8"></div>
+    <div class="intro-background">
+    <div class="background-video">
+      <video autoplay="true"  loop="loop" muted="muted" preload="auto" volume="0" parallax parallax-ratio="0.4">
+        <source src="/static/other/background.webm" type="video/webm">
+        <source src="/static/other/background.mp4" type="video/mp4">
+        Video not supported
+      </video>
+    </div>
+    </div>
     <!-- background image for introduction ends -->  
     
     <!-- introduction container begins-->

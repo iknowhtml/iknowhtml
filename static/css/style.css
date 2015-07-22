@@ -43,15 +43,25 @@ body {
 
 .intro-background {
   height: 725px;
-  background: url("/static/img/background.jpg") no-repeat center center;
-  background-position-x: 47%;
-  -webkit-filter: grayscale(100%) brightness(25%);
-  position: relative; }
+  -webkit-filter: grayscale(100%) brightness(50%);
+  position: relative;
+  overflow: hidden; }
   @media only screen and (max-width: 736px) and (min-width: 0px) {
     .intro-background {
-      height: 500px;
-      width: auto;
-      background-position-x: 49%; } }
+      height: 500px; } }
+  .intro-background .background-video {
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto; }
 
 .intro-container {
   font-family: "Font-Thin";
