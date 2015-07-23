@@ -54,6 +54,10 @@ body {
       height: 500px; } }
   .intro-background .background-video {
     position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
@@ -61,6 +65,9 @@ body {
     min-height: 100%;
     width: auto;
     height: auto; }
+    @media only screen and (max-width: 736px) and (min-width: 0px) {
+      .intro-background .background-video {
+        display: none; } }
 
 .intro-container {
   font-family: "Font-Thin";
@@ -87,7 +94,7 @@ body {
         .main-navigation-container .navigation .main-navigation {
           display: none; } }
       .main-navigation-container .navigation .main-navigation .navigation-option {
-        font-size: 15px;
+        font-size: 18px;
         padding: 0px 10px;
         display: inline; }
         .main-navigation-container .navigation .main-navigation .navigation-option a {
@@ -149,7 +156,7 @@ body {
       width: 100%;
       padding: 25% 0px;
       font-family: "Font-Regular";
-      font-size: 30px; }
+      font-size: 50px; }
       @media only screen and (max-height: 450px) and (min-height: 0px) {
         .mobile-navigation-container .navigation .mobile-navigation-menu .navigation-menu-options {
           padding: 2% 0px;
@@ -199,7 +206,7 @@ body {
   margin: 0px 20px; }
   .body-container .section-container {
     text-align: center;
-    color: black;
+    color: #222222;
     -webkit-transition: width .2s ease;
     -moz-transition: width .2s ease;
     transition: width .2s ease; }
@@ -210,16 +217,11 @@ body {
       margin-top: 50px;
       margin-bottom: 20px; }
     .body-container .section-container .section-body {
-      font-family: "Font-Thin";
-      font-size: 20px;
+      font-family: "Font-Regular";
+      font-size: 15x;
       line-height: 150%;
-      margin-bottom: 40px; }
-      @media only screen and (max-width: 736px) and (min-width: 0px) {
-        .body-container .section-container .section-body {
-          font-family: "Font-Regular";
-          color: #222222; } }
+      margin-bottom: 50px; }
     .body-container .section-container a {
-      color: #222222;
       font-weight: bold; }
 
 .section-break {
