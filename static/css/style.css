@@ -155,7 +155,7 @@ body {
       width: 100%;
       padding: 19% 0px;
       font-family: "Font-Regular";
-      font-size: 50px; }
+      font-size: 40px; }
       @media only screen and (max-height: 450px) and (min-height: 0px) {
         .mobile-navigation-container .navigation .mobile-navigation-menu .navigation-menu-options {
           padding: 2% 0px;

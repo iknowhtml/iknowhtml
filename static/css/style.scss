@@ -262,7 +262,7 @@ $intro-height-mobile: 500px;
         width:100%;
         padding: 19% 0px;
         @include setFont('Regular');
-        font-size:50px;
+        font-size:40px;
 
         @include media-query-vertical(450px, 0px){
           padding: 2% 0px;
