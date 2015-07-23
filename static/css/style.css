@@ -221,7 +221,8 @@ body {
       line-height: 150%;
       margin-bottom: 50px; }
     .body-container .section-container a {
-      font-weight: bold; }
+      font-weight: bold;
+      color: #222222; }
 
 .section-break {
   border: none;
