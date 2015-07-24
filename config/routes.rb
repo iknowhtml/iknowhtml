@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  #root 'view#index'
+  root 'views#index'
 end
