@@ -158,9 +158,6 @@ $intro-height-mobile: 500px;
   a{
     text-decoration: none;
     color:rgba(255, 255, 255, 0.75);
-    transition: margin 0.2s ease;
-    -webkit-transition: margin 0.2s ease;
-    -moz-transition: margin 0.2s ease;
 
     &:hover{
       text-decoration: none;
@@ -388,6 +385,20 @@ $font-color: #222222;
   .copyright{
     font-size:15px;
     margin: 10px 0px;
+  }
+
+  .social-media{
+    position:relative;
+    bottom: 3px;
+    a{
+      font-size:30px;
+      text-decoration: none;
+      color:white;
+
+      &:hover{
+
+      }
+    }
   }
 }
 ////////////////////////
