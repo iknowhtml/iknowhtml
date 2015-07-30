@@ -1,0 +1,3 @@
+[submodule "static/other/resume"]
+	path = static/other/resume
+	url = https://github.com/iknowhtml/resume.git

@@ -42,7 +42,6 @@ body {
   overflow-y: hidden; }
 
 .intro-background {
-  height: 725px;
   width: 100%;
   background-color: black;
   -webkit-filter: grayscale(100%) brightness(50%);
@@ -50,8 +49,7 @@ body {
   overflow: hidden; }
   @media only screen and (max-width: 736px) and (min-width: 0px) {
     .intro-background {
-      background: url("/static/img/background.jpg") no-repeat center center;
-      height: 500px; } }
+      background: url("/static/img/background.jpg") no-repeat center center; } }
   .intro-background .background-video {
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
@@ -63,8 +61,7 @@ body {
     top: 50%;
     min-width: 25%;
     min-height: 100%;
-    width: auto;
-    height: auto; }
+    width: auto; }
     @media only screen and (max-width: 736px) and (min-width: 0px) {
       .intro-background .background-video {
         display: none; } }
@@ -75,7 +72,6 @@ body {
   color: #fff;
   position: absolute;
   top: 0;
-  height: 725px;
   width: 100%; }
 
 .main-navigation-container {
@@ -171,7 +167,6 @@ body {
             color: rgba(255, 255, 255, 0.9); }
 
 .introduction-header-container {
-  padding: 160px 0px;
   width: 100%;
   z-index: -10000; }
   @media only screen and (max-width: 736px) and (min-width: 527px) {
@@ -181,6 +176,7 @@ body {
     .introduction-header-container {
       padding: 50px 0px; } }
   .introduction-header-container .introduction-header {
+    position: relative;
     padding-left: 70px; }
     @media only screen and (max-width: 736px) and (min-width: 0) {
       .introduction-header-container .introduction-header {

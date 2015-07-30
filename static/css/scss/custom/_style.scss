@@ -95,11 +95,11 @@ body {
 }
 
 //////styling for introduction container and background image/overlay///// 
-$intro-height: 725px;
-$intro-height-mobile: 500px;
+//$intro-height: 725px;
+//$intro-height-mobile: 500px;
 
 .intro-background {
-  height: $intro-height;
+  //height: $intro-height;
   width: 100%;
   background-color: black;
   -webkit-filter: grayscale(100%) brightness(50%); 
@@ -108,7 +108,7 @@ $intro-height-mobile: 500px;
 
   @include media-query-horizontal(736px, 0px){
     background: url('/static/img/background.jpg') no-repeat center center;
-    height: $intro-height-mobile;
+    //height: $intro-height-mobile;
   }
 
   .background-video{
@@ -123,7 +123,6 @@ $intro-height-mobile: 500px;
     min-width: 25%;
     min-height: 100%;
     width: auto;
-    height: auto;
 
     @include media-query-horizontal(736px, 0px){
       display: none;
@@ -138,7 +137,7 @@ $intro-height-mobile: 500px;
   color:#fff;
   position:absolute;
   top:0;
-  height: $intro-height;
+  //height: $intro-height;
   width:100%;
 
 }
@@ -284,7 +283,7 @@ $intro-height-mobile: 500px;
 
 /////styling for header content in introduction/////
 .introduction-header-container{
-  padding: 160px 0px;
+  //padding: 125px 0px;
   width:100%;
   z-index:-10000;
 
@@ -299,8 +298,8 @@ $intro-height-mobile: 500px;
 
 
   .introduction-header{
+    position: relative;
     padding-left: 70px;
-
     @include media-query-horizontal(736px, 0){
       padding-left: 0px;
     }
