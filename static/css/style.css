@@ -47,9 +47,6 @@ body {
   -webkit-filter: grayscale(100%) brightness(50%);
   position: relative;
   overflow: hidden; }
-  @media only screen and (max-width: 736px) and (min-width: 0px) {
-    .intro-background {
-      background: url("/static/img/background.jpg") no-repeat center center; } }
   .intro-background .background-video {
     position: absolute;
     -webkit-transform: translate(-50%, -50%);
@@ -62,9 +59,6 @@ body {
     min-width: 25%;
     min-height: 100%;
     width: auto; }
-    @media only screen and (max-width: 736px) and (min-width: 0px) {
-      .intro-background .background-video {
-        display: none; } }
 
 .intro-container {
   font-family: "Font-Thin";
@@ -83,7 +77,8 @@ body {
     padding: 0px 30px; }
     @media only screen and (max-width: 736px) and (min-width: 0px) {
       .main-navigation-container .navigation {
-        padding: 0px 10px; } }
+        padding: 0px 10px;
+        height: 30px; } }
     .main-navigation-container .navigation .main-navigation {
       margin: 35px 0px; }
       @media only screen and (max-width: 736px) and (min-width: 0px) {
@@ -107,7 +102,8 @@ body {
         display: inline; }
         .main-navigation-container .mobile-navigation .mobile-navigation-btn-container {
           height: 30px;
-          margin-right: 5px; }
+          margin-right: 5px;
+          margin-bottom: 60px; }
           .main-navigation-container .mobile-navigation .mobile-navigation-btn-container .mobile-navigation-btn {
             float: right; }
             .main-navigation-container .mobile-navigation .mobile-navigation-btn-container .mobile-navigation-btn .bar {
@@ -168,13 +164,8 @@ body {
 
 .introduction-header-container {
   width: 100%;
+  height: 100%;
   z-index: -10000; }
-  @media only screen and (max-width: 736px) and (min-width: 527px) {
-    .introduction-header-container {
-      padding: 100px 0px; } }
-  @media only screen and (max-width: 526px) and (min-width: 0px) {
-    .introduction-header-container {
-      padding: 50px 0px; } }
   .introduction-header-container .introduction-header {
     position: relative;
     padding-left: 70px; }
@@ -183,7 +174,6 @@ body {
         padding-left: 0px; } }
     .introduction-header-container .introduction-header .introduction-header-main {
       text-align: center;
-      font-size: 100px;
       letter-spacing: 15px; }
     .introduction-header-container .introduction-header .introduction-header-sub {
       margin: 10px 0px;

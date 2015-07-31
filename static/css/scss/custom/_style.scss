@@ -95,21 +95,12 @@ body {
 }
 
 //////styling for introduction container and background image/overlay///// 
-//$intro-height: 725px;
-//$intro-height-mobile: 500px;
-
 .intro-background {
-  //height: $intro-height;
   width: 100%;
   background-color: black;
   -webkit-filter: grayscale(100%) brightness(50%); 
   position: relative;
   overflow: hidden;
-
-  @include media-query-horizontal(736px, 0px){
-    background: url('/static/img/background.jpg') no-repeat center center;
-    //height: $intro-height-mobile;
-  }
 
   .background-video{
     position: absolute;
@@ -123,10 +114,6 @@ body {
     min-width: 25%;
     min-height: 100%;
     width: auto;
-
-    @include media-query-horizontal(736px, 0px){
-      display: none;
-    }
   }
 
 }
@@ -189,6 +176,7 @@ body {
 
     @include media-query-horizontal(736px, 0px){
       padding: 0px 10px;
+      height: 30px;
     }
     
     .main-navigation{
@@ -217,6 +205,7 @@ body {
       .mobile-navigation-btn-container{
         height:30px;
         margin-right:5px;
+        margin-bottom: 60px;
 
         @include mobile-navigation-btn;
       }
@@ -285,16 +274,8 @@ body {
 .introduction-header-container{
   //padding: 125px 0px;
   width:100%;
+  height: 100%;
   z-index:-10000;
-
-  @include media-query-horizontal(736px, 527px){
-    padding: 100px 0px;
-  }
-
-  @include media-query-horizontal(526px, 0px){
-    padding: 50px 0px;
-  }
-
 
 
   .introduction-header{
@@ -307,7 +288,6 @@ body {
 
     .introduction-header-main{
       text-align:center;
-      font-size: 100px;
       letter-spacing: 15px;
 
     }
