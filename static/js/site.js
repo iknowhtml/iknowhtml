@@ -27,20 +27,23 @@ app.controller('introCtrl', ['$scope', function($scope){
 		var win_height = $(window).height() < 960 ? $(window).height() : 960;	
 		win_height = win_height < 568 ? 568 : win_height;
 		var win_width = $(window).width();
-		var height = win_width > 736 ? 0.85 * win_height : 0.6 *win_height;
-		var ratio = win_width > 320 ? (win_width > 360 ? (win_width > 412 ? 0.00029 : 0.00035) : 0.0004) : 0.00005;
+		console.log(win_width);
+		var height = win_width > 736 ? 0.9 * win_height : 0.6 *win_height;
+		var ratio = win_width > 320 ? (win_width > 736 ? (win_width > 1226 ? 0.00025 : 0.00028) : 0.00045) : 0.00005;
 		console.log(ratio);
 		var top = ratio * Math.pow(height,2);
-		var size = 0.10 * $(window).width();
+		var size = 0.10 * win_width;
 		size = size > 130 ? 130 : size; 
 		size = size < 50 ? 50 : size; 
-
+		var btn_txt = 0.02 * win_width;
+		btn_txt = btn_txt < 16 ? 16 : btn_txt;
 		$('#intro').css('height', height+ 'px');
 
-		$('.introduction-header').css('top', top + 'px');	
+		$('.introduction-header').css('padding-top', top + 'px');	
 
 		$('.introduction-header-main').css('font-size', size + 'px');
 
+		$('.button').css('font-size', btn_txt + 'px');
 	}
 
 	function configureMobile(){
