@@ -291,7 +291,7 @@ body {
     }
   
     .introduction-header-sub{
-      margin: 10px 0px;
+      margin-bottom: 10px;
       text-align:center;
       font-size: 22.5px;
       letter-spacing: 4.5px;
@@ -301,6 +301,8 @@ body {
 ////////////////////////////////////////////////////
 
 .button{
+  text-decoration: none;
+  color:white;
   text-align: center;
   display: block;
   background-color: none;
@@ -318,7 +320,6 @@ body {
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
-
   @include media-query-horizontal(432px, 0px){
     padding: 10px 0px;
     min-width: 80px;
@@ -330,6 +331,11 @@ body {
   }
 
   &:hover {
+    background-color: white;
+    color: black;
+  }
+
+   &:visited {
     background-color: white;
     color: black;
   }

@@ -29,19 +29,26 @@ app.controller('introCtrl', ['$scope', function($scope){
 		var win_width = $(window).width();
 		console.log(win_width);
 		var height = win_width > 736 ? 0.9 * win_height : 0.6 *win_height;
-		var ratio = win_width > 320 ? (win_width > 736 ? (win_width > 1226 ? 0.00025 : 0.00028) : 0.00045) : 0.00005;
+		var ratio = win_width > 320 ? (win_width > 736 ? (win_width > 1226 ? 0.00022 : 0.00025) : 0.0002) : 0.00005;
 		console.log(ratio);
 		var top = ratio * Math.pow(height,2);
-		var size = 0.10 * win_width;
-		size = size > 130 ? 130 : size; 
-		size = size < 50 ? 50 : size; 
+		var header_txt = 0.10 * win_width;
+		header_txt = header_txt > 130 ? 130 : header_txt; 
+		header_txt = header_txt < 50 ? 50 : header_txt;
+		var  sub_txt = 0.04 * win_width;
+		sub_txt = sub_txt > 22 ? 22 : sub_txt;
+		sub_txt = sub_txt < 15 ? 15 : sub_txt;
 		var btn_txt = 0.02 * win_width;
-		btn_txt = btn_txt < 16 ? 16 : btn_txt;
+		btn_txt = btn_txt > 20 ? 20 : btn_txt;
+		btn_txt = btn_txt < 10 ? 10 : btn_txt;
+		
 		$('#intro').css('height', height+ 'px');
 
 		$('.introduction-header').css('padding-top', top + 'px');	
 
-		$('.introduction-header-main').css('font-size', size + 'px');
+		$('.introduction-header-main').css('font-size', header_txt + 'px');
+
+		$('.introduction-header-sub').css('font-size', sub_txt + 'px');
 
 		$('.button').css('font-size', btn_txt + 'px');
 	}

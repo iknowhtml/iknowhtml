@@ -176,12 +176,14 @@ body {
       text-align: center;
       letter-spacing: 15px; }
     .introduction-header-container .introduction-header .introduction-header-sub {
-      margin: 10px 0px;
+      margin-bottom: 10px;
       text-align: center;
       font-size: 22.5px;
       letter-spacing: 4.5px; }
 
 .button {
+  text-decoration: none;
+  color: white;
   text-align: center;
   display: block;
   background-color: none;
@@ -207,6 +209,9 @@ body {
     background-color: white;
     color: black; }
   .button:hover {
+    background-color: white;
+    color: black; }
+  .button:visited {
     background-color: white;
     color: black; }
 
