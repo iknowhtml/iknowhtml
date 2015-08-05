@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="siteApp" ng-controller="navCtrl">
+<html ng-app="siteApp" ng-controller="introCtrl" ng-class="{fixed:showResume}">
 <head>
   <!-- meta tags -->
   <meta name="google-site-verification" content="F_fHI8uQZyniSWXh4c7PjDTlCyT0Kv3Hhu07PBWn4qg" />
@@ -42,8 +42,27 @@
 
   <title>Aki Gao | Full Stack Developer | Freelance Developer</title>
 </head>
-
 <body>
+  <div class = "modal-container" ng-show="showResume">
+    <div class="col-xl-8 col-xl-offset-2 col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 col-sm-10 col-sm-offset-1 col-xs-10 col-xs-offset-1">
+      <div class="modal">
+        <div class="modal-header">
+          <div class="header">RESUM&Eacute;</div>
+        </div>
+        <div class="modal-content">
+          <iframe src="/static/other/resume/cv.html"></iframe>
+        </div>
+        <div class="modal-footer">
+           <div class="modal-button">
+            <a ng-click="toggleResume()">CLOSE</a>
+          </div>
+          <div class="modal-button">
+            <a>DOWNLOAD</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
    <!-- mobile navigation container begins -->
   <div class = "mobile-navigation-container" ng-show="showMobileMenu">
     <!--navigation begins -->
@@ -135,13 +154,13 @@
               <div class="introduction-header-sub">Personal Portfolio Site</div>
               <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                  <div class="col-lg-4 col-lg-offset-8 col-lg-offset-6 col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6 col-xs-8 col-xs-offset-4">
-                    <a class="button">Resume</a>
+                  <div id="resume-button" class="col-xl-2 col-xl-offset-10 col-lg-3 col-lg-offset-9 col-md-4 col-md-offset-8 col-sm-4 col-sm-offset-8 col-xs-4 col-xs-offset-8">
+                    <a class="button modal-trigger" ng-click="toggleResume()">Resum&eacute;</a>
                   </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                  <div class="col-lg-4 col-md-6 col-md-offset-0 col-sm-6 col-xs-8">
-                    <a class="button" href="https://github.com/iknowhtml target="_blank">Github</a>
+                  <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-xs-4">
+                    <a class="button" href="https://github.com/iknowhtml" target="_blank">Github</a>
                   </div>
                 </div>
               </div>
