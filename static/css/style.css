@@ -161,11 +161,12 @@ body {
       font-size: 22.5px;
       letter-spacing: 4.5px; }
 
-.button {
-  text-decoration: none;
+.buttons-container .button {
+  width: 150px;
   color: white;
+  text-decoration: none;
+  display: inline-block;
   text-align: center;
-  display: block;
   background-color: none;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding-box;
@@ -173,21 +174,22 @@ body {
   border-style: solid;
   border-width: 1px;
   border-color: white;
-  margin: 10px auto;
-  padding: 8px 0;
+  margin: 10px 10px;
+  padding: 5px 20px;
   font-size: 26px;
   line-height: 1.471;
   position: relative;
   -webkit-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease; }
-  @media only screen and (max-width: 432px) and (min-width: 0px) {
-    .button {
-      min-width: 80px; } }
-  .button:active {
+  @media only screen and (max-width: 740px) and (min-width: 0px) {
+    .buttons-container .button {
+      width: 100px;
+      margin-top: 0; } }
+  .buttons-container .button:active {
     background-color: white;
     color: black; }
-  .button:hover {
+  .buttons-container .button:hover {
     background-color: white;
     color: black; }
 

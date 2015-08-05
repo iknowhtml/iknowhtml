@@ -34,7 +34,7 @@ app.controller('introCtrl', ['$scope', function($scope){
 		var win_width = $(window).width();
 		//console.log(win_width);
 		var height = win_width > 736 ? 0.9 * win_height : 0.6 *win_height;
-		var ratio = win_width > 320 ? (win_width > 736 ? (win_width > 1226 ? 0.00022 : 0.00023) : 0.0003) : 0.00005;
+		var ratio = win_width > 320 ? (win_width > 736 ? (win_width > 1226 ? 0.00022 : 0.00023) : 0.00025) : 0.00005;
 		//console.log(ratio);
 		var top = ratio * Math.pow(height,2);
 		var header_txt = 0.10 * win_width;
@@ -83,23 +83,16 @@ app.controller('introCtrl', ['$scope', function($scope){
 		var modal_margin = win_height * 0.1;
 		var modal_header_txt = win_height * 0.05;
 		var modal_header_padding = win_height * 0.012;
-		var modal_button_margin = Math.pow(win_height,2) * 0.0000097;
-		var button_txt = win_height * 0.015;
+		var ratio = win_height < 1200 ? (win_height < 800 ? 0.0000125 : 0.0000082) : 0.0000079;
+		console.log(ratio);
+		var modal_button_margin = Math.pow(win_height, 2) * ratio;
+		console.log(modal_button_margin)
+		var button_txt = win_height * 0.017;
 
 		$('.modal').css({'height': modal_height + 'px', 'margin' : modal_margin + 'px  0'});
 		$('.modal-header').css({'font-size' : modal_header_txt + 'px', 'padding' : modal_header_padding + 'px'});
 		$('.modal-button').css('margin-top', modal_button_margin + 'px');
 		$('.modal-button').css('font-size', button_txt +'px');
-		/*
-		header:
-		          padding: 15px 0;
-          font-size: 300%;
-        
-        modal-button: 
-
-                   margin-top: 12px;
-
-		*/
 	}
 
 }]);

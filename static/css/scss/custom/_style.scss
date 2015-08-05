@@ -266,38 +266,43 @@ body {
 }
 ////////////////////////////////////////////////////
 
-.button{
-  text-decoration: none;
-  color:white;
-  text-align: center;
-  display: block;
-  background-color: none;
-  -webkit-background-clip: padding-box;
-  -moz-background-clip: padding-box;
-  background-clip: padding-box;
-  border-style: solid;
-  border-width: 1px;
-  border-color: white;
-  margin:10px auto;
-  padding: 8px 0;
-  font-size: 26px;
-  line-height: 1.471;
-  position: relative;
-  -webkit-transition: background-color 0.3s ease;
-  -moz-transition: background-color 0.3s ease;
-  transition: background-color 0.3s ease;
-  @include media-query-horizontal(432px, 0px){
-    min-width: 80px;
-  }
+.buttons-container{
+  .button{
+    width: 150px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    background-color: none;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding-box;
+    background-clip: padding-box;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    margin:10px 10px;
+    padding: 5px 20px;
+    font-size: 26px;
+    line-height: 1.471;
+    position: relative;
+    -webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease;
+    
+    @include media-query-horizontal(740px, 0px){
+      width:100px;
+      margin-top:0;
+    }
+    
+    &:active {
+      background-color: white;
+      color: black;
+    }
 
-  &:active {
-    background-color: white;
-    color: black;
-  }
-
-  &:hover {
-    background-color: white;
-    color: black;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
   }
 }
 
@@ -372,7 +377,7 @@ $font-color: #222222;
       box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22); 
 
       .modal-header{
-              @include setFont('Thin');
+        @include setFont('Thin');
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         border-radius: 3px 3px 1px 1px;
         background-color: #212121;
