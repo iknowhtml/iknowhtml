@@ -1,5 +1,5 @@
 # Personal Portfolio Site 
-Personal site for Aki Gao. Uses CSS/SASS, Bootstrap 12-Column Grid and AngularJS for the front-end, and Flask  for the back-end.   
+Personal site for Aki Gao. Uses custom CSS/SASS, and AngularJS for the front-end, and Flask  for the back-end.   
 
 # How To Run
 To us, please install **virtualenv** on your machine.  
