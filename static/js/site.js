@@ -60,7 +60,7 @@ app.controller('introCtrl', ['$scope', function($scope){
 		if(win_width < 433){
 			$('#resume-button').removeClass('col-xs-offset-8').addClass('col-xs-offset-4');
 		}
-		
+
 		else{
 			$('#resume-button').removeClass('col-xs-offset-4').addClass('col-xs-offset-8');
 			
@@ -84,11 +84,12 @@ app.controller('introCtrl', ['$scope', function($scope){
 		var modal_header_txt = win_height * 0.05;
 		var modal_header_padding = win_height * 0.012;
 		var modal_button_margin = Math.pow(win_height,2) * 0.0000097;
+		var button_txt = win_height * 0.015;
 
 		$('.modal').css({'height': modal_height + 'px', 'margin' : modal_margin + 'px  0'});
 		$('.modal-header').css({'font-size' : modal_header_txt + 'px', 'padding' : modal_header_padding + 'px'});
 		$('.modal-button').css('margin-top', modal_button_margin + 'px');
-
+		$('.modal-button').css('font-size', button_txt +'px');
 		/*
 		header:
 		          padding: 15px 0;
