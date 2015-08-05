@@ -270,6 +270,7 @@ body {
   .button{
     width: 140px;
     color: white;
+    letter-spacing: 2px;
     text-decoration: none;
     display: inline-block;
     text-align: center;
@@ -281,7 +282,7 @@ body {
     border-width: 1px;
     border-color: white;
     margin:10px 10px;
-    padding: 7px 20px;
+    padding: 9px 20px;
     font-size: 26px;
     line-height: 1.471;
     position: relative;
@@ -292,13 +293,13 @@ body {
     @include media-query-horizontal($screen-md, $screen-sm + 1){
       width:100px;
       margin-top:0;
-      padding: 5px 10px;
+      padding: 6px 10px;
     }
 
     @include media-query-horizontal($screen-sm, $screen-xs + 1){
       width: 90px;
       margin-top:0;
-      padding: 5px 10px;
+      padding: 6px 10px;
     }
     
     @include media-query-horizontal($screen-xs, 0){
