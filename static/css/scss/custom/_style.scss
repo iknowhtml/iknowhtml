@@ -268,7 +268,7 @@ body {
 
 .buttons-container{
   .button{
-    width: 150px;
+    width: 140px;
     color: white;
     text-decoration: none;
     display: inline-block;
@@ -281,7 +281,7 @@ body {
     border-width: 1px;
     border-color: white;
     margin:10px 10px;
-    padding: 5px 20px;
+    padding: 7px 20px;
     font-size: 26px;
     line-height: 1.471;
     position: relative;
@@ -289,9 +289,22 @@ body {
     -moz-transition: background-color 0.3s ease;
     transition: background-color 0.3s ease;
     
-    @include media-query-horizontal(740px, 0px){
+    @include media-query-horizontal($screen-md, $screen-sm + 1){
       width:100px;
       margin-top:0;
+      padding: 5px 10px;
+    }
+
+    @include media-query-horizontal($screen-sm, $screen-xs + 1){
+      width: 90px;
+      margin-top:0;
+      padding: 5px 10px;
+    }
+    
+    @include media-query-horizontal($screen-xs, 0){
+      width: 75px;
+      margin-top:0;
+      padding: 5px 5px;
     }
     
     &:active {
