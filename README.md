@@ -1,5 +1,5 @@
 # Hey there, I'm Aki 👋. Welcome to my Github profile!
-I build cool stuff in web3 an awesome blockchain company and help make the web more accessible at [User1st](https://www.user1st.com/). 
+I build cool stuff in web3 an an awesome blockchain company, and helped make the web more accessible at [User1st](https://www.user1st.com/). 
 
 Check out my projects below.
 
