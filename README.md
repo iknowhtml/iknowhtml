@@ -3,5 +3,5 @@ I'm a staff software engineer at [Ava Labs](https://www.avalabs.org/), was a co-
 
 When I'm not making another unnecessary refactor in my code or catching up on the latest flavor of the month in the JS ecosystem, I'm lifting heavy stuff at the gym, making pourovers and spending way too much money at [Balenciaga](https://www.balenciaga.com).
 
-To learn more about me, check out [my resume](https://github.com/iknowhtml/resume/raw/gh-pages/Aki%20Gao's%20Resume.pdf), [personal website](https://21ciaga.com),
+To learn more about me, check out [my resume](https://21ciaga.com/resume), [personal website](https://21ciaga.com),
 and [LinkedIn](https://www.linkedin.com/in/iknowhtml).
